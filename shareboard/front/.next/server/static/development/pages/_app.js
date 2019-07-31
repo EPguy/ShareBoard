@@ -1384,13 +1384,13 @@ var ShareBoard = function ShareBoard(_ref) {
       lineNumber: 13
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: this
-  })));
+  }));
 };
 
 ShareBoard.propTypes = {
