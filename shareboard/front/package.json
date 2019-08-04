@@ -12,12 +12,22 @@
   "license": "ISC",
   "dependencies": {
     "antd": "^3.20.7",
-    "next": "^9.0.2",
+    "next": "^9.0.3",
     "next-redux-wrapper": "^3.0.0-alpha.3",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
     "redux-saga": "^1.0.5"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-react": "^6.24.1",
+    "file-loader": "^4.1.0",
+    "image-webpack-loader": "^5.0.0",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
   }
 }

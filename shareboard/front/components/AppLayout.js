@@ -14,7 +14,7 @@ const AppLayout = ({children}) => {
                     fontSize: '17px'
                 }}>
                 <Menu.SubMenu title="SubMenu" style={{marginLeft: '20px'}}>
-                    <Menu.Item><Link href="/user/info"><a>내 정보</a></Link></Menu.Item>
+                    <Menu.Item><Link href="/"><a>메인 화면</a></Link></Menu.Item>
                 </Menu.SubMenu>
                 <Menu.Item key="class" style={{marginLeft: '700px'}}><Link href="/class"><a>수업</a></Link></Menu.Item>
                 <Menu.Item key="project"><Link href="/project"><a>과제</a></Link></Menu.Item>

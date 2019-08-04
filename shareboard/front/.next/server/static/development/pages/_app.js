@@ -113,9 +113,10 @@ var _jsxFileName = "D:\\contest\\shareboard\\front\\components\\AppLayout.js";
 
 
 
-var AppLayout = function AppLayout(_ref) {
-  var children = _ref.children;
-  var dummy = {
+const AppLayout = ({
+  children
+}) => {
+  const dummy = {
     classname: "DSM"
   };
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -123,7 +124,7 @@ var AppLayout = function AppLayout(_ref) {
       fileName: _jsxFileName,
       lineNumber: 9
     },
-    __self: this
+    __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"], {
     mode: "horizontal",
     style: {
@@ -136,7 +137,7 @@ var AppLayout = function AppLayout(_ref) {
       fileName: _jsxFileName,
       lineNumber: 10
     },
-    __self: this
+    __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].SubMenu, {
     title: "SubMenu",
     style: {
@@ -146,27 +147,27 @@ var AppLayout = function AppLayout(_ref) {
       fileName: _jsxFileName,
       lineNumber: 16
     },
-    __self: this
+    __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
     },
-    __self: this
+    __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/user/info",
+    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
     },
-    __self: this
+    __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
     },
-    __self: this
-  }, "\uB0B4 \uC815\uBCF4")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
+    __self: undefined
+  }, "\uBA54\uC778 \uD654\uBA74")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
     key: "class",
     style: {
       marginLeft: '700px'
@@ -175,80 +176,80 @@ var AppLayout = function AppLayout(_ref) {
       fileName: _jsxFileName,
       lineNumber: 19
     },
-    __self: this
+    __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/class",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
     },
-    __self: this
+    __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
     },
-    __self: this
+    __self: undefined
   }, "\uC218\uC5C5"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
     key: "project",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
-    __self: this
+    __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/project",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
-    __self: this
+    __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
-    __self: this
+    __self: undefined
   }, "\uACFC\uC81C"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
     key: "group",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
-    __self: this
+    __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/group",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
-    __self: this
+    __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
-    __self: this
+    __self: undefined
   }, "\uBAA8\uB460"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
     key: "setting",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     },
-    __self: this
+    __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/setting",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     },
-    __self: this
+    __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     },
-    __self: this
+    __self: undefined
   }, "\uAD00\uB9AC"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
     key: "login",
     style: {
@@ -258,20 +259,20 @@ var AppLayout = function AppLayout(_ref) {
       fileName: _jsxFileName,
       lineNumber: 23
     },
-    __self: this
+    __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/login",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
-    __self: this
+    __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
-    __self: this
+    __self: undefined
   }, "\uB85C\uADF8\uC778")))));
 };
 
@@ -301,17 +302,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/assign */ "co
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/create.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/create.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/create */ "core-js/library/fn/object/create");
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js":
 /*!*******************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js ***!
@@ -331,320 +321,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/define-proper
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptor */ "core-js/library/fn/object/get-own-property-descriptor");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js":
-/*!********************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js ***!
-  \********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/get-prototype-of */ "core-js/library/fn/object/get-prototype-of");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/set-prototype-of.js":
-/*!********************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/set-prototype-of.js ***!
-  \********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/set-prototype-of */ "core-js/library/fn/object/set-prototype-of");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/reflect/construct.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/reflect/construct.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/reflect/construct */ "core-js/library/fn/reflect/construct");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/symbol.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/symbol.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/symbol */ "core-js/library/fn/symbol");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/symbol/iterator */ "core-js/library/fn/symbol/iterator");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js ***!
-  \**********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _assertThisInitialized; });
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js ***!
-  \***************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _classCallCheck; });
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/construct.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/construct.js ***!
-  \**********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _construct; });
-/* harmony import */ var _core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/reflect/construct */ "./node_modules/@babel/runtime-corejs2/core-js/reflect/construct.js");
-/* harmony import */ var _core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _setPrototypeOf__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./setPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/setPrototypeOf.js");
-
-
-
-function isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !_core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0___default.a) return false;
-  if (_core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0___default.a.sham) return false;
-  if (typeof Proxy === "function") return true;
-
-  try {
-    Date.prototype.toString.call(_core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0___default()(Date, [], function () {}));
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
-
-function _construct(Parent, args, Class) {
-  if (isNativeReflectConstruct()) {
-    _construct = _core_js_reflect_construct__WEBPACK_IMPORTED_MODULE_0___default.a;
-  } else {
-    _construct = function _construct(Parent, args, Class) {
-      var a = [null];
-      a.push.apply(a, args);
-      var Constructor = Function.bind.apply(Parent, a);
-      var instance = new Constructor();
-      if (Class) Object(_setPrototypeOf__WEBPACK_IMPORTED_MODULE_1__["default"])(instance, Class.prototype);
-      return instance;
-    };
-  }
-
-  return _construct.apply(null, arguments);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js ***!
-  \************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _createClass; });
-/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
-
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-
-    _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js ***!
-  \***************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _getPrototypeOf; });
-/* harmony import */ var _core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/get-prototype-of */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js");
-/* harmony import */ var _core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core-js/object/set-prototype-of */ "./node_modules/@babel/runtime-corejs2/core-js/object/set-prototype-of.js");
-/* harmony import */ var _core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_1__);
-
-
-function _getPrototypeOf(o) {
-  _getPrototypeOf = _core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_1___default.a ? _core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_0___default.a : function _getPrototypeOf(o) {
-    return o.__proto__ || _core_js_object_get_prototype_of__WEBPACK_IMPORTED_MODULE_0___default()(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js ***!
-  \*********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _inherits; });
-/* harmony import */ var _core_js_object_create__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/create */ "./node_modules/@babel/runtime-corejs2/core-js/object/create.js");
-/* harmony import */ var _core_js_object_create__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_create__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _setPrototypeOf__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./setPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/setPrototypeOf.js");
-
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = _core_js_object_create__WEBPACK_IMPORTED_MODULE_0___default()(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) Object(_setPrototypeOf__WEBPACK_IMPORTED_MODULE_1__["default"])(subClass, superClass);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js":
-/*!**************************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js ***!
-  \**************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _possibleConstructorReturn; });
-/* harmony import */ var _helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../helpers/esm/typeof */ "./node_modules/@babel/runtime-corejs2/helpers/esm/typeof.js");
-/* harmony import */ var _assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
-
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (Object(_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_0__["default"])(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return Object(_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__["default"])(self);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/setPrototypeOf.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/setPrototypeOf.js ***!
-  \***************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _setPrototypeOf; });
-/* harmony import */ var _core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/set-prototype-of */ "./node_modules/@babel/runtime-corejs2/core-js/object/set-prototype-of.js");
-/* harmony import */ var _core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0__);
-
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = _core_js_object_set_prototype_of__WEBPACK_IMPORTED_MODULE_0___default.a || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/typeof.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/typeof.js ***!
-  \*******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _typeof; });
-/* harmony import */ var _core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/symbol/iterator */ "./node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js");
-/* harmony import */ var _core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _core_js_symbol__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core-js/symbol */ "./node_modules/@babel/runtime-corejs2/core-js/symbol.js");
-/* harmony import */ var _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_core_js_symbol__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-function _typeof2(obj) { if (typeof _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a === "function" && typeof _core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0___default.a === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a === "function" && obj.constructor === _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a && obj !== _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
-
-function _typeof(obj) {
-  if (typeof _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a === "function" && _typeof2(_core_js_symbol_iterator__WEBPACK_IMPORTED_MODULE_0___default.a) === "symbol") {
-    _typeof = function _typeof(obj) {
-      return _typeof2(obj);
-    };
-  } else {
-    _typeof = function _typeof(obj) {
-      return obj && typeof _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a === "function" && obj.constructor === _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a && obj !== _core_js_symbol__WEBPACK_IMPORTED_MODULE_1___default.a.prototype ? "symbol" : _typeof2(obj);
-    };
-  }
-
-  return _typeof(obj);
-}
 
 /***/ }),
 
@@ -746,24 +422,12 @@ module.exports = _interopRequireWildcard;
 "use strict";
 
 
-var _interopRequireDefault2 = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-var _classCallCheck2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js"));
-
-var _getPrototypeOf2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js"));
-
-var _inherits2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js"));
-
 var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
 
 exports.__esModule = true;
-exports["default"] = void 0;
+exports.default = void 0;
 
 var _map = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/map */ "./node_modules/@babel/runtime-corejs2/core-js/map.js"));
 
@@ -782,21 +446,21 @@ var _utils = __webpack_require__(/*! next-server/dist/lib/utils */ "next-server/
 
 
 function isLocal(href) {
-  var url = (0, _url.parse)(href, false, true);
-  var origin = (0, _url.parse)((0, _utils.getLocationOrigin)(), false, true);
+  const url = (0, _url.parse)(href, false, true);
+  const origin = (0, _url.parse)((0, _utils.getLocationOrigin)(), false, true);
   return !url.host || url.protocol === origin.protocol && url.host === origin.host;
 }
 
 function memoizedFormatUrl(formatFunc) {
-  var lastHref = null;
-  var lastAs = null;
-  var lastResult = null;
-  return function (href, as) {
+  let lastHref = null;
+  let lastAs = null;
+  let lastResult = null;
+  return (href, as) => {
     if (lastResult && href === lastHref && as === lastAs) {
       return lastResult;
     }
 
-    var result = formatFunc(href, as);
+    const result = formatFunc(href, as);
     lastHref = href;
     lastAs = as;
     lastResult = result;
@@ -808,9 +472,9 @@ function formatUrl(url) {
   return url && typeof url === 'object' ? (0, _utils.formatWithValidation)(url) : url;
 }
 
-var observer;
-var listeners = new _map["default"]();
-var IntersectionObserver =  false ? undefined : null;
+let observer;
+const listeners = new _map.default();
+const IntersectionObserver =  false ? undefined : null;
 
 function getObserver() {
   // Return shared instance of IntersectionObserver if already created
@@ -823,17 +487,17 @@ function getObserver() {
     return undefined;
   }
 
-  return observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
+  return observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
       if (!listeners.has(entry.target)) {
         return;
       }
 
-      var cb = listeners.get(entry.target);
+      const cb = listeners.get(entry.target);
 
       if (entry.isIntersecting || entry.intersectionRatio > 0) {
         observer.unobserve(entry.target);
-        listeners["delete"](entry.target);
+        listeners.delete(entry.target);
         cb();
       }
     });
@@ -842,179 +506,164 @@ function getObserver() {
   });
 }
 
-var listenToIntersections = function listenToIntersections(el, cb) {
-  var observer = getObserver();
+const listenToIntersections = (el, cb) => {
+  const observer = getObserver();
 
   if (!observer) {
-    return function () {};
+    return () => {};
   }
 
   observer.observe(el);
   listeners.set(el, cb);
-  return function () {
+  return () => {
     observer.unobserve(el);
-    listeners["delete"](el);
+    listeners.delete(el);
   };
 };
 
-var Link =
-/*#__PURE__*/
-function (_react$Component) {
-  (0, _inherits2["default"])(Link, _react$Component);
+class Link extends _react.Component {
+  constructor() {
+    super(...arguments);
 
-  function Link() {
-    var _this;
+    this.cleanUpListeners = () => {};
 
-    (0, _classCallCheck2["default"])(this, Link);
-    _this = (0, _possibleConstructorReturn2["default"])(this, (0, _getPrototypeOf2["default"])(Link).apply(this, arguments));
-
-    _this.cleanUpListeners = function () {};
-
-    _this.formatUrls = memoizedFormatUrl(function (href, asHref) {
+    this.formatUrls = memoizedFormatUrl((href, asHref) => {
       return {
         href: formatUrl(href),
         as: asHref ? formatUrl(asHref) : asHref
       };
     });
 
-    _this.linkClicked = function (e) {
+    this.linkClicked = e => {
       // @ts-ignore target exists on currentTarget
-      var _e$currentTarget = e.currentTarget,
-          nodeName = _e$currentTarget.nodeName,
-          target = _e$currentTarget.target;
+      const {
+        nodeName,
+        target
+      } = e.currentTarget;
 
       if (nodeName === 'A' && (target && target !== '_self' || e.metaKey || e.ctrlKey || e.shiftKey || e.nativeEvent && e.nativeEvent.which === 2)) {
         // ignore click for new tab / new window behavior
         return;
       }
 
-      var _this$formatUrls = _this.formatUrls(_this.props.href, _this.props.as),
-          href = _this$formatUrls.href,
-          as = _this$formatUrls.as;
+      let {
+        href,
+        as
+      } = this.formatUrls(this.props.href, this.props.as);
 
       if (!isLocal(href)) {
         // ignore click if it's outside our scope
         return;
       }
 
-      var pathname = window.location.pathname;
+      const {
+        pathname
+      } = window.location;
       href = (0, _url.resolve)(pathname, href);
       as = as ? (0, _url.resolve)(pathname, as) : href;
       e.preventDefault(); //  avoid scroll for urls with anchor refs
 
-      var scroll = _this.props.scroll;
+      let {
+        scroll
+      } = this.props;
 
       if (scroll == null) {
         scroll = as.indexOf('#') < 0;
       } // replace state instead of push if prop is present
 
 
-      _router["default"][_this.props.replace ? 'replace' : 'push'](href, as, {
-        shallow: _this.props.shallow
-      }).then(function (success) {
+      _router.default[this.props.replace ? 'replace' : 'push'](href, as, {
+        shallow: this.props.shallow
+      }).then(success => {
         if (!success) return;
 
         if (scroll) {
           window.scrollTo(0, 0);
           document.body.focus();
         }
-      })["catch"](function (err) {
-        if (_this.props.onError) _this.props.onError(err);
       });
     };
-
-    return _this;
   }
 
-  (0, _createClass2["default"])(Link, [{
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
+  componentWillUnmount() {
+    this.cleanUpListeners();
+  }
+
+  handleRef(ref) {
+    if (this.props.prefetch && IntersectionObserver && ref && ref.tagName) {
       this.cleanUpListeners();
+      this.cleanUpListeners = listenToIntersections(ref, () => {
+        this.prefetch();
+      });
     }
-  }, {
-    key: "handleRef",
-    value: function handleRef(ref) {
-      var _this2 = this;
-
-      if (this.props.prefetch && IntersectionObserver && ref && ref.tagName) {
-        this.cleanUpListeners();
-        this.cleanUpListeners = listenToIntersections(ref, function () {
-          _this2.prefetch();
-        });
-      }
-    } // The function is memoized so that no extra lifecycles are needed
-    // as per https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
-
-  }, {
-    key: "prefetch",
-    value: function prefetch() {
-      if (!this.props.prefetch || "undefined" === 'undefined') return; // Prefetch the JSON page if asked (only in the client)
-
-      var pathname = window.location.pathname;
-
-      var _this$formatUrls2 = this.formatUrls(this.props.href, this.props.as),
-          parsedHref = _this$formatUrls2.href;
-
-      var href = (0, _url.resolve)(pathname, parsedHref);
-
-      _router["default"].prefetch(href);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this3 = this;
-
-      var children = this.props.children;
-
-      var _this$formatUrls3 = this.formatUrls(this.props.href, this.props.as),
-          href = _this$formatUrls3.href,
-          as = _this$formatUrls3.as; // Deprecated. Warning shown by propType check. If the childen provided is a string (<Link>example</Link>) we wrap it in an <a> tag
+  } // The function is memoized so that no extra lifecycles are needed
+  // as per https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
 
 
-      if (typeof children === 'string') {
-        children = _react["default"].createElement("a", null, children);
-      } // This will return the first child, if multiple are provided it will throw an error
+  prefetch() {
+    if (!this.props.prefetch || "undefined" === 'undefined') return; // Prefetch the JSON page if asked (only in the client)
+
+    const {
+      pathname
+    } = window.location;
+    const {
+      href: parsedHref
+    } = this.formatUrls(this.props.href, this.props.as);
+    const href = (0, _url.resolve)(pathname, parsedHref);
+
+    _router.default.prefetch(href);
+  }
+
+  render() {
+    let {
+      children
+    } = this.props;
+    const {
+      href,
+      as
+    } = this.formatUrls(this.props.href, this.props.as); // Deprecated. Warning shown by propType check. If the childen provided is a string (<Link>example</Link>) we wrap it in an <a> tag
+
+    if (typeof children === 'string') {
+      children = _react.default.createElement("a", null, children);
+    } // This will return the first child, if multiple are provided it will throw an error
 
 
-      var child = _react.Children.only(children);
+    const child = _react.Children.only(children);
 
-      var props = {
-        ref: function ref(el) {
-          return _this3.handleRef(el);
-        },
-        onMouseEnter: function onMouseEnter(e) {
-          if (child.props && typeof child.props.onMouseEnter === 'function') {
-            child.props.onMouseEnter(e);
-          }
+    const props = {
+      ref: el => this.handleRef(el),
+      onMouseEnter: e => {
+        if (child.props && typeof child.props.onMouseEnter === 'function') {
+          child.props.onMouseEnter(e);
+        }
 
-          _this3.prefetch();
-        },
-        onClick: function onClick(e) {
-          if (child.props && typeof child.props.onClick === 'function') {
-            child.props.onClick(e);
-          }
+        this.prefetch();
+      },
+      onClick: e => {
+        if (child.props && typeof child.props.onClick === 'function') {
+          child.props.onClick(e);
+        }
 
-          if (!e.defaultPrevented) {
-            _this3.linkClicked(e);
-          }
-        } // If child is an <a> tag and doesn't have a href attribute, or if the 'passHref' property is
-        // defined, we specify the current 'href', so that repetition is not needed by the user
+        if (!e.defaultPrevented) {
+          this.linkClicked(e);
+        }
+      } // If child is an <a> tag and doesn't have a href attribute, or if the 'passHref' property is
+      // defined, we specify the current 'href', so that repetition is not needed by the user
 
-      };
+    };
 
-      if (this.props.passHref || child.type === 'a' && !('href' in child.props)) {
-        props.href = as || href;
-      } // Add the ending slash to the paths. So, we can serve the
-      // "<page>/index.html" directly.
+    if (this.props.passHref || child.type === 'a' && !('href' in child.props)) {
+      props.href = as || href;
+    } // Add the ending slash to the paths. So, we can serve the
+    // "<page>/index.html" directly.
 
 
-      if (false) {}
+    if (false) {}
 
-      return _react["default"].cloneElement(child, props);
-    }
-  }]);
-  return Link;
-}(_react.Component);
+    return _react.default.cloneElement(child, props);
+  }
+
+}
 
 Link.propTypes = void 0;
 Link.defaultProps = {
@@ -1022,20 +671,20 @@ Link.defaultProps = {
 };
 
 if (true) {
-  var warn = (0, _utils.execOnce)(console.error); // This module gets removed by webpack.IgnorePlugin
+  const warn = (0, _utils.execOnce)(console.error); // This module gets removed by webpack.IgnorePlugin
 
-  var exact = __webpack_require__(/*! prop-types-exact */ "prop-types-exact");
+  const exact = __webpack_require__(/*! prop-types-exact */ "prop-types-exact");
 
   Link.propTypes = exact({
-    href: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].object]).isRequired,
-    as: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].object]),
-    prefetch: _propTypes["default"].bool,
-    replace: _propTypes["default"].bool,
-    shallow: _propTypes["default"].bool,
-    passHref: _propTypes["default"].bool,
-    scroll: _propTypes["default"].bool,
-    children: _propTypes["default"].oneOfType([_propTypes["default"].element, function (props, propName) {
-      var value = props[propName];
+    href: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]).isRequired,
+    as: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]),
+    prefetch: _propTypes.default.bool,
+    replace: _propTypes.default.bool,
+    shallow: _propTypes.default.bool,
+    passHref: _propTypes.default.bool,
+    scroll: _propTypes.default.bool,
+    children: _propTypes.default.oneOfType([_propTypes.default.element, (props, propName) => {
+      const value = props[propName];
 
       if (typeof value === 'string') {
         warn("Warning: You're using a string directly inside <Link>. This usage has been deprecated. Please add an <a> tag as child of <Link>");
@@ -1047,7 +696,7 @@ if (true) {
 }
 
 var _default = Link;
-exports["default"] = _default;
+exports.default = _default;
 
 /***/ }),
 
@@ -1061,19 +710,14 @@ exports["default"] = _default;
 "use strict";
 
 
-var _interopRequireDefault2 = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-var _construct2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/construct */ "./node_modules/@babel/runtime-corejs2/helpers/esm/construct.js"));
-
 var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireWildcard.js");
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
 
 exports.__esModule = true;
 exports.useRouter = useRouter;
-exports.useRequest = useRequest;
 exports.makePublicRouterInstance = makePublicRouterInstance;
-exports.createRouter = exports.withRouter = exports["default"] = void 0;
+exports.createRouter = exports.withRouter = exports.default = void 0;
 
 var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/extends */ "./node_modules/@babel/runtime-corejs2/helpers/extends.js"));
 
@@ -1083,69 +727,71 @@ var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
 
 var _router2 = _interopRequireWildcard(__webpack_require__(/*! next-server/dist/lib/router/router */ "next-server/dist/lib/router/router"));
 
-exports.Router = _router2["default"];
+exports.Router = _router2.default;
 exports.NextRouter = _router2.NextRouter;
 
 var _routerContext = __webpack_require__(/*! next-server/dist/lib/router-context */ "next-server/dist/lib/router-context");
 
-var _requestContext = __webpack_require__(/*! next-server/dist/lib/request-context */ "next-server/dist/lib/request-context");
-
 var _withRouter = _interopRequireDefault(__webpack_require__(/*! ./with-router */ "./node_modules/next/dist/client/with-router.js"));
 
-exports.withRouter = _withRouter["default"];
+exports.withRouter = _withRouter.default;
 /* global window */
 
-var singletonRouter = {
+const singletonRouter = {
   router: null,
   // holds the actual router instance
   readyCallbacks: [],
-  ready: function ready(cb) {
+
+  ready(cb) {
     if (this.router) return cb();
 
     if (false) {}
   }
+
 }; // Create public properties and methods of the router in the singletonRouter
 
-var urlPropertyFields = ['pathname', 'route', 'query', 'asPath'];
-var propertyFields = ['components'];
-var routerEvents = ['routeChangeStart', 'beforeHistoryChange', 'routeChangeComplete', 'routeChangeError', 'hashChangeStart', 'hashChangeComplete'];
-var coreMethodFields = ['push', 'replace', 'reload', 'back', 'prefetch', 'beforePopState']; // Events is a static property on the router, the router doesn't have to be initialized to use it
+const urlPropertyFields = ['pathname', 'route', 'query', 'asPath'];
+const propertyFields = ['components'];
+const routerEvents = ['routeChangeStart', 'beforeHistoryChange', 'routeChangeComplete', 'routeChangeError', 'hashChangeStart', 'hashChangeComplete'];
+const coreMethodFields = ['push', 'replace', 'reload', 'back', 'prefetch', 'beforePopState']; // Events is a static property on the router, the router doesn't have to be initialized to use it
 
-(0, _defineProperty["default"])(singletonRouter, 'events', {
-  get: function get() {
-    return _router2["default"].events;
+(0, _defineProperty.default)(singletonRouter, 'events', {
+  get() {
+    return _router2.default.events;
   }
+
 });
-propertyFields.concat(urlPropertyFields).forEach(function (field) {
+propertyFields.concat(urlPropertyFields).forEach(field => {
   // Here we need to use Object.defineProperty because, we need to return
   // the property assigned to the actual router
   // The value might get changed as we change routes and this is the
   // proper way to access it
-  (0, _defineProperty["default"])(singletonRouter, field, {
-    get: function get() {
-      var router = getRouter();
+  (0, _defineProperty.default)(singletonRouter, field, {
+    get() {
+      const router = getRouter();
       return router[field];
     }
+
   });
 });
-coreMethodFields.forEach(function (field) {
+coreMethodFields.forEach(field => {
   // We don't really know the types here, so we add them later instead
   ;
 
   singletonRouter[field] = function () {
-    var router = getRouter();
-    return router[field].apply(router, arguments);
+    const router = getRouter();
+    return router[field](...arguments);
   };
 });
-routerEvents.forEach(function (event) {
-  singletonRouter.ready(function () {
-    _router2["default"].events.on(event, function () {
-      var eventField = "on" + event.charAt(0).toUpperCase() + event.substring(1);
-      var _singletonRouter = singletonRouter;
+routerEvents.forEach(event => {
+  singletonRouter.ready(() => {
+    _router2.default.events.on(event, function () {
+      const eventField = "on" + event.charAt(0).toUpperCase() + event.substring(1);
+      const _singletonRouter = singletonRouter;
 
       if (_singletonRouter[eventField]) {
         try {
-          _singletonRouter[eventField].apply(_singletonRouter, arguments);
+          _singletonRouter[eventField](...arguments);
         } catch (err) {
           // tslint:disable-next-line:no-console
           console.error("Error when running the Router event: " + eventField); // tslint:disable-next-line:no-console
@@ -1159,7 +805,7 @@ routerEvents.forEach(function (event) {
 
 function getRouter() {
   if (!singletonRouter.router) {
-    var message = 'No router instance found.\n' + 'You should only use "next/router" inside the client side of your app.\n';
+    const message = 'No router instance found.\n' + 'You should only use "next/router" inside the client side of your app.\n';
     throw new Error(message);
   }
 
@@ -1169,14 +815,10 @@ function getRouter() {
 
 var _default = singletonRouter; // Reexport the withRoute HOC
 
-exports["default"] = _default;
+exports.default = _default;
 
 function useRouter() {
-  return _react["default"].useContext(_routerContext.RouterContext);
-}
-
-function useRequest() {
-  return _react["default"].useContext(_requestContext.RequestContext);
+  return _react.default.useContext(_routerContext.RouterContext);
 } // INTERNAL APIS
 // -------------
 // (do not use following exports inside the app)
@@ -1185,15 +827,13 @@ function useRequest() {
 // This should **not** use inside the server.
 
 
-var createRouter = function createRouter() {
+const createRouter = function createRouter() {
   for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
     args[_key] = arguments[_key];
   }
 
-  singletonRouter.router = (0, _construct2["default"])(_router2["default"], args);
-  singletonRouter.readyCallbacks.forEach(function (cb) {
-    return cb();
-  });
+  singletonRouter.router = new _router2.default(...args);
+  singletonRouter.readyCallbacks.forEach(cb => cb());
   singletonRouter.readyCallbacks = [];
   return singletonRouter.router;
 }; // This function is used to create the `withRouter` router instance
@@ -1202,14 +842,12 @@ var createRouter = function createRouter() {
 exports.createRouter = createRouter;
 
 function makePublicRouterInstance(router) {
-  var _router = router;
-  var instance = {};
+  const _router = router;
+  const instance = {};
 
-  for (var _i = 0, _urlPropertyFields = urlPropertyFields; _i < _urlPropertyFields.length; _i++) {
-    var property = _urlPropertyFields[_i];
-
+  for (const property of urlPropertyFields) {
     if (typeof _router[property] === 'object') {
-      instance[property] = (0, _extends2["default"])({}, _router[property]); // makes sure query is not stateful
+      instance[property] = (0, _extends2.default)({}, _router[property]); // makes sure query is not stateful
 
       continue;
     }
@@ -1218,21 +856,22 @@ function makePublicRouterInstance(router) {
   } // Events is a static property on the router, the router doesn't have to be initialized to use it
 
 
-  instance.events = _router2["default"].events;
-  propertyFields.forEach(function (field) {
+  instance.events = _router2.default.events;
+  propertyFields.forEach(field => {
     // Here we need to use Object.defineProperty because, we need to return
     // the property assigned to the actual router
     // The value might get changed as we change routes and this is the
     // proper way to access it
-    (0, _defineProperty["default"])(instance, field, {
-      get: function get() {
+    (0, _defineProperty.default)(instance, field, {
+      get() {
         return _router[field];
       }
+
     });
   });
-  coreMethodFields.forEach(function (field) {
+  coreMethodFields.forEach(field => {
     instance[field] = function () {
-      return _router[field].apply(_router, arguments);
+      return _router[field](...arguments);
     };
   });
   return instance;
@@ -1250,22 +889,10 @@ function makePublicRouterInstance(router) {
 "use strict";
 
 
-var _interopRequireDefault2 = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-var _classCallCheck2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js"));
-
-var _getPrototypeOf2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js"));
-
-var _inherits2 = _interopRequireDefault2(__webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js"));
-
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "./node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
 
 exports.__esModule = true;
-exports["default"] = withRouter;
+exports.default = withRouter;
 
 var _extends2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/extends */ "./node_modules/@babel/runtime-corejs2/helpers/extends.js"));
 
@@ -1274,40 +901,29 @@ var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
 var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "prop-types"));
 
 function withRouter(ComposedComponent) {
-  var WithRouteWrapper =
-  /*#__PURE__*/
-  function (_react$default$Compon) {
-    (0, _inherits2["default"])(WithRouteWrapper, _react$default$Compon);
-
-    function WithRouteWrapper() {
-      var _this;
-
-      (0, _classCallCheck2["default"])(this, WithRouteWrapper);
-      _this = (0, _possibleConstructorReturn2["default"])(this, (0, _getPrototypeOf2["default"])(WithRouteWrapper).apply(this, arguments));
-      _this.context = void 0;
-      return _this;
+  class WithRouteWrapper extends _react.default.Component {
+    constructor() {
+      super(...arguments);
+      this.context = void 0;
     }
 
-    (0, _createClass2["default"])(WithRouteWrapper, [{
-      key: "render",
-      value: function render() {
-        return _react["default"].createElement(ComposedComponent, (0, _extends2["default"])({
-          router: this.context.router
-        }, this.props));
-      }
-    }]);
-    return WithRouteWrapper;
-  }(_react["default"].Component);
+    render() {
+      return _react.default.createElement(ComposedComponent, (0, _extends2.default)({
+        router: this.context.router
+      }, this.props));
+    }
+
+  }
 
   WithRouteWrapper.displayName = void 0;
   WithRouteWrapper.getInitialProps = void 0;
   WithRouteWrapper.contextTypes = {
-    router: _propTypes["default"].object
+    router: _propTypes.default.object
   };
   WithRouteWrapper.getInitialProps = ComposedComponent.getInitialProps;
 
   if (true) {
-    var name = ComposedComponent.displayName || ComposedComponent.name || 'Unknown';
+    const name = ComposedComponent.displayName || ComposedComponent.name || 'Unknown';
     WithRouteWrapper.displayName = "withRouter(" + name + ")";
   }
 
@@ -1350,26 +966,27 @@ var _jsxFileName = "D:\\contest\\shareboard\\front\\pages\\_app.js";
 
 
 
-var ShareBoard = function ShareBoard(_ref) {
-  var Component = _ref.Component;
+const ShareBoard = ({
+  Component
+}) => {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
-    __self: this
+    __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     },
-    __self: this
+    __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
-    __self: this
+    __self: undefined
   }, "ShareBoard"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
     rel: "stylesheet",
     href: "https://cdnjs.cloudflare.com/ajax/libs/antd/3.16.2/antd.css",
@@ -1377,19 +994,19 @@ var ShareBoard = function ShareBoard(_ref) {
       fileName: _jsxFileName,
       lineNumber: 11
     },
-    __self: this
+    __self: undefined
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_AppLayout__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
-    __self: this
+    __self: undefined
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
-    __self: this
+    __self: undefined
   }));
 };
 
@@ -1445,17 +1062,6 @@ module.exports = require("core-js/library/fn/object/assign");
 
 /***/ }),
 
-/***/ "core-js/library/fn/object/create":
-/*!***************************************************!*\
-  !*** external "core-js/library/fn/object/create" ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/create");
-
-/***/ }),
-
 /***/ "core-js/library/fn/object/define-property":
 /*!************************************************************!*\
   !*** external "core-js/library/fn/object/define-property" ***!
@@ -1475,72 +1081,6 @@ module.exports = require("core-js/library/fn/object/define-property");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/object/get-own-property-descriptor");
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/get-prototype-of":
-/*!*************************************************************!*\
-  !*** external "core-js/library/fn/object/get-prototype-of" ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/get-prototype-of");
-
-/***/ }),
-
-/***/ "core-js/library/fn/object/set-prototype-of":
-/*!*************************************************************!*\
-  !*** external "core-js/library/fn/object/set-prototype-of" ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/object/set-prototype-of");
-
-/***/ }),
-
-/***/ "core-js/library/fn/reflect/construct":
-/*!*******************************************************!*\
-  !*** external "core-js/library/fn/reflect/construct" ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/reflect/construct");
-
-/***/ }),
-
-/***/ "core-js/library/fn/symbol":
-/*!********************************************!*\
-  !*** external "core-js/library/fn/symbol" ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/symbol");
-
-/***/ }),
-
-/***/ "core-js/library/fn/symbol/iterator":
-/*!*****************************************************!*\
-  !*** external "core-js/library/fn/symbol/iterator" ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/symbol/iterator");
-
-/***/ }),
-
-/***/ "next-server/dist/lib/request-context":
-/*!*******************************************************!*\
-  !*** external "next-server/dist/lib/request-context" ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("next-server/dist/lib/request-context");
 
 /***/ }),
 
