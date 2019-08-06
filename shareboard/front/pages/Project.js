@@ -79,9 +79,9 @@ const Project = () => {
                     <Card title="미제출 과제">
                         {dummy.task.map((v,i) => {
                             return (
-                                <div key={i} style={{borderLeft: '5px solid #adb5bd'}}>
-                                    <p style={{marginLeft: '5px'}}>{v.body}</p>
-                                    <p style={{marginLeft: '5px'}}>{v.date} 까지</p>
+                                <div key={i} style={{borderLeft: '5px solid #495057'}}>
+                                    <p style={{marginLeft: '8px'}}>{v.body}</p>
+                                    <p style={{marginLeft: '8px'}}>{v.date} 까지</p>
                                 </div>
                             )
                         })}

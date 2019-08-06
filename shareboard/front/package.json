@@ -11,11 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "antd": "^3.20.7",
+    "antd": "^3.21.2",
     "axios": "^0.19.0",
     "draft-js": "^0.11.0",
     "draft-js-export-html": "^1.4.1",
-    "draftjs-to-html": "^0.8.4",
     "immutable": "^4.0.0-rc.12",
     "next": "^9.0.3",
     "next-redux-wrapper": "^3.0.0-alpha.3",
@@ -23,18 +22,8 @@
     "react": "^16.8.6",
     "react-cookies": "^0.1.1",
     "react-dom": "^16.8.6",
-    "react-draft-wysiwyg": "^1.13.2",
     "react-redux": "^7.1.0",
     "redux-saga": "^1.0.5"
   },
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.6",
-    "babel-preset-react": "^6.24.1",
-    "file-loader": "^4.1.0",
-    "image-webpack-loader": "^5.0.0",
-    "url-loader": "^2.1.0",
-    "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6"
-  }
+  "devDependencies": {}
 }

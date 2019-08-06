@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
-import {Typography, Card, Collapse, Button, Icon, Modal, Form, Input, Upload } from 'antd';
+import {Typography, Card, Collapse, Button, Icon, Modal, Form, Input, Upload, DatePicker  } from 'antd';
 const Project = () => {
     const [visible, onChangeVisible] = useState(false);
+    const [taskName, onChangeTaskName] = useState('');
+    const [taskInfo, onChangeTaskInfo] = useState('');
+    const [taskDate, onChangeTaskDate] = useState('');
     const dummy = {
         topic: "김주성의 클래스",
         task: [
@@ -36,6 +39,10 @@ const Project = () => {
                 num: '9'
             },
         ]
+    }
+    const onChange = (date, dateString) => {
+        console.log(dateString)
+        onChangeTaskDate(dateString)
     }
     return (
         <div className="classWrapper">
@@ -126,15 +133,22 @@ const Project = () => {
                     <div>
                         <label style={{display:'inline'}} htmlFor="task-name">과제명</label>
                         <Input
+                            value={taskName}
+                            onChnage={onChangeTaskName}
                             name="task-name"
                         />
                     </div>
                     <div style={{marginTop: '20px'}}>
-                        <label style={{ display:'inline'}} htmlFor="task-body">과제 내용</label>
-                        <Input.TextArea
-                            rows={10}
-                            name="task-body"
+                        <label style={{ display:'inline'}} htmlFor="task-info">과제 내용</label>
+                        <Input
+                            value={taskInfo}
+                            onChnage={onChangeTaskInfo}
+                            name="task-info"
                         />
+                    </div>
+                    <div style={{marginTop: '20px'}}>
+                        <div style={{ display:'inline'}}>과제 마감 날짜</div><br/>
+                        <DatePicker onChange={onChange}/>
                     </div>
                     <div style={{marginTop: '20px'}}>과제 양식 첨부 파일</div>
                     <Upload name="class-image">

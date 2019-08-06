@@ -1,9 +1,28 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Link from 'next/link';
 import { Card, Row, Col, Avatar  } from 'antd';
+import axios from 'axios';
+import cookie from 'react-cookies';
 
-const Home = () => {
-    
+const Home = (userInfo) => {
+    const [classArray, onChangeClassArray] = useState(null);
+
+    useEffect(() => {
+        console.log(userInfo.userInfo.id)
+        if(userInfo !== '') {
+            axios.get(`http://18.220.117.207:5000/class/:${userInfo.userInfo.id}`,{
+                headers:{
+                    'token': cookie.load('token')
+                }
+            }).then(response => {
+                console.log(response)
+            }).catch(error => {
+                console.log(error)
+            })
+        } else {
+            console.log("bye")
+        }
+    })
     const { Meta } = Card;
 
     const dummy = [

@@ -1,21 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Typography, Form, Input, Icon, Button, Upload } from 'antd';
 
 const addclass = () => {
-    const fileList = [
-        {
-          uid: null,
-          name: null,
-          status: null,
-          url: null,
-          thumbUrl: null,
-        },
-    ];
+    const [className, onChangeClassName] = useState('');
+    const [classIntroduce, onChangeClassIntroduce] = useState('');
 
     const props = {
-        action: null,
-        listType: null,
-        defaultFileList: null,
+        name: 'file',
+        action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
     };
 
     return (
@@ -42,7 +34,7 @@ const addclass = () => {
                         </div>
                         <div style={{marginLeft:'830px', width:'300px'}}>
                             <label style={{display:'inline'}} htmlFor="class-image">클래스 대표 이미지</label> <br/>
-                            <Upload {...props} name="class-image">
+                            <Upload {...props}>
                                 <Button>
                                 <Icon type="upload" /> Upload
                                 </Button>    

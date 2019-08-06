@@ -97,47 +97,94 @@ module.exports =
 /*!*********************************!*\
   !*** ./components/AppLayout.js ***!
   \*********************************/
-/*! exports provided: default */
+/*! exports provided: useInput, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd */ "antd");
-/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useInput", function() { return useInput; });
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd */ "antd");
+/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_cookies__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-cookies */ "react-cookies");
+/* harmony import */ var react_cookies__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_cookies__WEBPACK_IMPORTED_MODULE_5__);
+
 var _jsxFileName = "D:\\contest\\shareboard\\front\\components\\AppLayout.js";
 
 
 
-let checkMain = false;
+
+
+const useInput = (initValue = null) => {
+  const [value, setter] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(initValue);
+  const handler = Object(react__WEBPACK_IMPORTED_MODULE_1__["useCallback"])(e => {
+    setter(e.target.value);
+  }, []);
+  return [value, handler];
+};
 
 const AppLayout = ({
+  userInfo,
   children
 }) => {
-  const [joinVisible, onChangeJoinVisible] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
-  const [addVisible, onChangeAddVisible] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
-  const [settingVisible, onChangeSettingVisible] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    console.log(window.location.href);
+  const [joinVisible, onChangeJoinVisible] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
+  const [addVisible, onChangeAddVisible] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
+  const [settingVisible, onChangeSettingVisible] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false);
+  const [className, onChangeClassName] = useInput('');
+  const [classIntroduce, onChangeClassIntroduce] = useInput('');
+  const [imgURL, onChangeImgURL] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])('');
+  const [joinClassName, onChangeJoinClassName] = useInput('');
+  const props = {
+    name: 'img',
+    action: 'http://18.220.117.207:5000/class/img',
 
-    if (window.location.href === "http://localhost:3000/") {
-      checkMain = true;
-    } else {
-      checkMain = false;
+    onChange(info) {
+      if (info.file.status !== 'uploading') {
+        onChangeImgURL(info.file.name);
+      }
     }
 
-    console.log(checkMain);
-  });
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  };
+
+  const onSubmit = () => {
+    axios__WEBPACK_IMPORTED_MODULE_4___default.a.post("http://18.220.117.207:5000/class", {
+      className: className,
+      info: classIntroduce,
+      img: `http://18.220.117.207:5000/${imgURL}`
+    }).then(response => {
+      console.log(response);
+    }).catch(error => {
+      console.log(error);
+    });
+    console.log(className, classIntroduce, `http://18.220.117.207:5000/${imgURL}`);
+  };
+
+  const onJoin = () => {
+    axios__WEBPACK_IMPORTED_MODULE_4___default.a.post(`http://18.220.117.207:5000/class/join/:${joinClassName}`, {
+      header: {
+        'token': react_cookies__WEBPACK_IMPORTED_MODULE_5___default.a.load('token')
+      }
+    }).then(response => {
+      console.log(response);
+      onChangeJoinVisible(false);
+    }).catch(error => {
+      console.log(error);
+    });
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 57
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Menu"], {
     mode: "horizontal",
     style: {
       height: '300',
@@ -145,383 +192,411 @@ const AppLayout = ({
       alignItems: 'center',
       fontSize: '17px'
     },
+    theme: "dark",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 58
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].SubMenu, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Menu"].SubMenu, {
     title: "SubMenu",
     style: {
       marginLeft: '20px'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 66
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Menu"].Item, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 67
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 67
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 67
     },
     __self: undefined
-  }, "\uBA54\uC778 \uD654\uBA74"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
+  }, "\uBA54\uC778 \uD654\uBA74"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Menu"].Item, {
     onClick: () => onChangeAddVisible(true),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 68
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 68
     },
     __self: undefined
-  }, "\uD074\uB798\uC2A4 \uCD94\uAC00")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
+  }, "\uD074\uB798\uC2A4 \uCD94\uAC00")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Menu"].Item, {
     onClick: () => onChangeJoinVisible(true),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 69
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 69
     },
     __self: undefined
-  }, "\uD074\uB798\uC2A4 \uAC00\uC785\uD558\uAE30"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
+  }, "\uD074\uB798\uC2A4 \uAC00\uC785\uD558\uAE30"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Menu"].Item, {
     key: "class",
     style: {
-      marginLeft: '700px'
+      marginLeft: '650px'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 71
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/class",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 71
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 71
     },
     __self: undefined
-  }, "\uC791\uC5C5"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
+  }, "\uC791\uC5C5"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Menu"].Item, {
     onClick: () => onChangeSettingVisible(true),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 72
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 72
     },
     __self: undefined
-  }, "\uAD00\uB9AC")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
+  }, "\uAD00\uB9AC")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Menu"].Item, {
     key: "project",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 73
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/project",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 73
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 73
     },
     __self: undefined
-  }, "\uACFC\uC81C"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
+  }, "\uACFC\uC81C"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Menu"].Item, {
     key: "group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 74
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/group",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 74
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 74
     },
     __self: undefined
-  }, "\uBAA8\uB460"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
+  }, "\uBAA8\uB460"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Menu"].Item, {
     key: "setting",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 75
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/document",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 75
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 75
     },
     __self: undefined
-  }, "\uC790\uB8CC"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Menu"].Item, {
+  }, "\uC790\uB8CC"))), userInfo ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Menu"].Item, {
     key: "login",
     style: {
-      marginLeft: '600px'
+      marginLeft: '650px'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 78
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/login",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 78
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 78
     },
     __self: undefined
-  }, "\uB85C\uADF8\uC778")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Modal"], {
+  }, "\uB85C\uADF8\uC544\uC6C3"))) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Menu"].Item, {
+    key: "login",
+    style: {
+      marginLeft: '650px'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: undefined
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/login",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: undefined
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: undefined
+  }, "\uB85C\uADF8\uC778")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Modal"], {
     title: "\uD074\uB798\uC2A4 \uAC00\uC785\uD558\uAE30",
     visible: joinVisible,
-    onOk: () => onChangeJoinVisible(false),
+    onOk: () => onJoin(),
     onCancel: () => onChangeJoinVisible(false),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 86
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Form"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Form"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 92
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 93
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     style: {
       display: 'inline'
     },
-    htmlFor: "join-code",
+    htmlFor: "join-class-name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 94
     },
     __self: undefined
-  }, "\uCD08\uB300 \uCF54\uB4DC \uC785\uB825"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Input"], {
-    name: "join-code",
+  }, "\uAC00\uC785\uD560 \uD074\uB798\uC2A4\uBA85 \uC785\uB825"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Input"], {
+    value: joinClassName,
+    onChange: onChangeJoinClassName,
+    name: "join-class-name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 95
     },
     __self: undefined
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Modal"], {
+  })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Modal"], {
     title: "\uD074\uB798\uC2A4 \uC0DD\uC131\uD558\uAE30",
     visible: addVisible,
-    onOk: () => onChangeAddVisible(false),
+    onOk: () => onSubmit(),
     onCancel: () => onChangeAddVisible(false),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 103
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Form"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Form"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 109
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 110
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     style: {
       display: 'inline'
     },
     htmlFor: "class-name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 111
     },
     __self: undefined
-  }, "\uD074\uB798\uC2A4 \uBA85"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Input"], {
+  }, "\uD074\uB798\uC2A4 \uBA85"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Input"], {
+    value: className,
+    onChange: onChangeClassName,
     name: "class-name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 112
     },
     __self: undefined
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     style: {
       marginTop: '20px'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 118
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     style: {
       display: 'inline'
     },
-    htmlFor: "class-introduce",
+    htmlFor: "class-info",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 119
     },
     __self: undefined
-  }, "\uD074\uB798\uC2A4 \uC18C\uAC1C"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Input"].TextArea, {
-    rows: 10,
-    name: "class-introduce",
+  }, "\uD074\uB798\uC2A4 \uC18C\uAC1C"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Input"], {
+    value: classIntroduce,
+    onChange: onChangeClassIntroduce,
+    name: "class-info",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 120
     },
     __self: undefined
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     style: {
       marginTop: '20px'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 126
     },
     __self: undefined
-  }, "\uD074\uB798\uC2A4 \uB300\uD45C \uC774\uBBF8\uC9C0"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Upload"], {
-    name: "class-Representative-image",
+  }, "\uD074\uB798\uC2A4 \uB300\uD45C \uC774\uBBF8\uC9C0"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Upload"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 127
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Button"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 128
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
     type: "upload",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 129
     },
     __self: undefined
-  }), " Upload")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Modal"], {
+  }), " Upload")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Modal"], {
     title: "\uAD00\uB9AC",
     visible: settingVisible,
     onOk: () => onChangeSettingVisible(false),
     onCancel: () => onChangeSettingVisible(false),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 134
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Form"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Form"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 140
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 141
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     style: {
       display: 'inline'
     },
     htmlFor: "class-code",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 142
     },
     __self: undefined
-  }, "\uC218\uC5C5 \uCD08\uB300 \uCF54\uB4DC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Input"], {
+  }, "\uC218\uC5C5 \uCD08\uB300 \uCF54\uB4DC"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Input"], {
     name: "class-code",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 143
     },
     __self: undefined
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     style: {
       marginTop: '20px'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 147
     },
     __self: undefined
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     style: {
       display: 'inline'
     },
     htmlFor: "student-information",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 148
     },
     __self: undefined
-  }, "\uD559\uC0DD \uC815\uBCF4"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_2__["Input"].TextArea, {
+  }, "\uD559\uC0DD \uC815\uBCF4"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(antd__WEBPACK_IMPORTED_MODULE_3__["Input"].TextArea, {
     rows: 10,
     name: "student-information",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 149
     },
     __self: undefined
   })))));
@@ -572,6 +647,39 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/define-proper
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptor */ "core-js/library/fn/object/get-own-property-descriptor");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
+/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
+/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+
+function _extends() {
+  _extends = _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default.a || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
 
 /***/ }),
 
@@ -1211,7 +1319,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "prop-types");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_AppLayout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/AppLayout */ "./components/AppLayout.js");
+/* harmony import */ var react_cookies__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-cookies */ "react-cookies");
+/* harmony import */ var react_cookies__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_cookies__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
 var _jsxFileName = "D:\\contest\\shareboard\\front\\pages\\_app.js";
+
+
 
 
 
@@ -1220,22 +1334,39 @@ var _jsxFileName = "D:\\contest\\shareboard\\front\\pages\\_app.js";
 const ShareBoard = ({
   Component
 }) => {
+  const [userInfo, onChangeUserInfo] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (react_cookies__WEBPACK_IMPORTED_MODULE_4___default.a.load('token')) {
+      axios__WEBPACK_IMPORTED_MODULE_5___default.a.get("http://18.220.117.207:5000/user/student", {
+        headers: {
+          'token': react_cookies__WEBPACK_IMPORTED_MODULE_4___default.a.load('token')
+        }
+      }).then(response => {
+        console.log(response);
+        onChangeUserInfo(response.data);
+      }).catch(error => {
+        console.log(error);
+      });
+    } else {
+      onChangeUserInfo('');
+    }
+  }, []);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 27
     },
     __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 28
     },
     __self: undefined
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 29
     },
     __self: undefined
   }, "ShareBoard"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -1243,7 +1374,7 @@ const ShareBoard = ({
     href: "https://cdnjs.cloudflare.com/ajax/libs/antd/3.16.2/antd.css",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 30
     },
     __self: undefined
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -1252,19 +1383,30 @@ const ShareBoard = ({
     href: "https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 31
+    },
+    __self: undefined
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+    rel: "stylesheet",
+    type: "text/css",
+    href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
     },
     __self: undefined
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_AppLayout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    userInfo: userInfo,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 34
     },
     __self: undefined
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, {
+    userInfo: userInfo,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 35
     },
     __self: undefined
   }));
@@ -1297,6 +1439,17 @@ module.exports = __webpack_require__(/*! private-next-pages/_app.js */"./pages/_
 /***/ (function(module, exports) {
 
 module.exports = require("antd");
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
 
 /***/ }),
 
@@ -1429,6 +1582,17 @@ module.exports = require("prop-types-exact");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-cookies":
+/*!********************************!*\
+  !*** external "react-cookies" ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-cookies");
 
 /***/ }),
 

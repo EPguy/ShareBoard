@@ -6,7 +6,9 @@ function Class() {
     const [editorState, setEditorState] = React.useState(
         EditorState.createEmpty()
     );
-    console.log(stateToHTML(editorState.getCurrentContent()));
+    const onSubmit = () => {
+        console.log(stateToHTML(editorState.getCurrentContent()));
+    }
     const styleMap = {
         'STRIKETHROUGH': {
           textDecoration: 'line-through',
@@ -60,13 +62,14 @@ function Class() {
                 `}
             </style>
             <div className="button-Wrapper">
-                <Button type="link" size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "Header-one"))}>H1</Button>
-                <Button type="link" style={{marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "Header-two"))}>H2</Button>
-                <Button type="link" style={{marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "Header-three"))}>H3</Button>
-                <Button type="link" style={{marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "Header-four"))}>H4</Button>
-                <Button type="link" style={{marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "UNDERLINE"))}>UL</Button>
-                <Button type="link" style={{marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "BOLD"))}>Bold</Button>
-                <Button type="link" style={{marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "ITALIC"))}>Italic</Button>
+                <Button type="link" style={{fontWeight:'bold', marginLeft: '450px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "Header-one"))}>H1</Button>
+                <Button type="link" style={{fontWeight:'bold', marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "Header-two"))}>H2</Button>
+                <Button type="link" style={{fontWeight:'bold', marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "Header-three"))}>H3</Button>
+                <Button type="link" style={{fontWeight:'bold', marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "Header-four"))}>H4</Button>
+                <Button type="link" style={{fontWeight:'bold', marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "UNDERLINE"))}>UL</Button>
+                <Button type="link" style={{fontWeight:'bold', marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "BOLD"))}>Bold</Button>
+                <Button type="link" style={{fontWeight:'bold', marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "ITALIC"))}>Italic</Button>
+                <Button type="primary" style={{marginLeft: '400px'}} onClick={onSubmit}>전송</Button>
             </div>
             <div className="text-Wrapper">
                 <Editor

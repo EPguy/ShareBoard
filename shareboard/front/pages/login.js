@@ -1,8 +1,8 @@
 import React, {useCallback, useState} from 'react';
-import {Form, Input, Icon, Button} from 'antd';
+import {Form, Input, Icon, Button, Modal} from 'antd';
 import Link from 'next/link';
 import axios from 'axios';
-
+import cookie from 'react-cookies';
 
 export const useInput = (initValue = null) => {
     const [value, setter] = useState(initValue);
@@ -15,6 +15,7 @@ export const useInput = (initValue = null) => {
 const login = () => {
     const [id, onChangeId] = useInput('');
     const [password, onChangePassword] = useInput('');
+    const [loginVisible, onChangeLoginVisible] = useState(false);
 
     const onSubmit = useCallback((e) => {
         e.preventDefault();
@@ -22,8 +23,10 @@ const login = () => {
             id: id,
             password: password,
         }).then(response => {
-            console.log(response)
+            cookie.save('token',response.data.token)
+            onChangeLoginVisible(true)
         }).catch(error => {
+            onChangeLoginVisible(false)
             console.log(error)
         })
         console.log(id, password)
@@ -127,6 +130,16 @@ const login = () => {
                     </Form>
                 </div>
             </div>
+            <Modal
+                title="로그인 성공!"
+                visible={loginVisible}
+                onOk={() => window.location.href="/"}
+                onCancel={() => window.location.href="/"}
+            >
+                <Form>
+                    <div>로그인에 성공하였습니다!</div>
+                </Form>
+            </Modal>
         </div>
     )
 }
