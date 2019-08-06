@@ -12,11 +12,16 @@
   "license": "ISC",
   "dependencies": {
     "antd": "^3.20.7",
+    "draft-js": "^0.11.0",
+    "draft-js-export-html": "^1.4.1",
+    "draftjs-to-html": "^0.8.4",
+    "immutable": "^4.0.0-rc.12",
     "next": "^9.0.3",
     "next-redux-wrapper": "^3.0.0-alpha.3",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-draft-wysiwyg": "^1.13.2",
     "react-redux": "^7.1.0",
     "redux-saga": "^1.0.5"
   },

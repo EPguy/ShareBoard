@@ -1,82 +1,83 @@
 import React from 'react';
-import {Typography, Card} from 'antd';
-const Class = () => {
-    const dummy = {
-        topic: "자바스크립트",
-        task: [
-            "공부하기",
-            "프로젝트하기",
-            "보완하기"
-        ],
-        data: {
-            date: "2019-08-04",
-            text: "안녕하세요"
+import {Editor, EditorState, RichUtils} from 'draft-js';
+import { Button } from 'antd';
+import {stateToHTML} from 'draft-js-export-html';
+function Class() {
+    const [editorState, setEditorState] = React.useState(
+        EditorState.createEmpty()
+    );
+    console.log(stateToHTML(editorState.getCurrentContent()));
+    const styleMap = {
+        'STRIKETHROUGH': {
+          textDecoration: 'line-through',
         },
-    }
+        'Header-one': {
+            fontSize: '40px',
+        },
+        'Header-two': {
+            fontSize: '35px',
+        },
+        'Header-three': {
+            fontSize: '30px',
+        },
+        'Header-four': {
+            fontSize: '25px',
+        },
+        
+    };
+
+    const handleKeyCommand = command => {
+        const newState = RichUtils.handleKeyCommand(
+            editorState,
+            command
+        );
+        if (newState) {
+            setEditorState(newState);
+            return "handled";
+        }
+        return "not-handled";
+   };
     return (
-        <div className="classWrapper">
-            <style  jsx>
+        <div>
+            <style jsx>
                 {`
-                    .classWrapper{
+                    .button-Wrapper{
+                        width: 100vw;
+                        margin-top: 50px;
                         display: flex;
                         justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
-                    }
-                    .classTitle{
-                        width: 1000px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
-                        font-size: 20px;
-                        border-bottom: 1px solid black;
-                    }
-                    .classBody{
-                        width: 1000px;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        flex-direction: row;
-                    }
-                    .topic{
-                        margin-top: 100px;
+                        align-items: cetner;
                         
                     }
-                    .task{
-                        margin-top: 40px;
-                        width: 213px;
-                    }
-                    .data{
-                        margin-left: 40px;
-                        width: 787px;
-                    }
-                    .item + .item{
-                        margin-top: 1px;
+                    .text-Wrapper {
+                        margin-left: 300px;
+                        padding-top: 20px;
+                        width: 70vw;
+                        border-top: 1px solid #ddd;
+                        margin-top: 20px;
+                        font-size: 20px;
                     }
                 `}
             </style>
-            <div className="classTitle">
-                <div className="topic item"><Typography.Title mark>주제: {dummy.topic}</Typography.Title></div>
+            <div className="button-Wrapper">
+                <Button type="link" size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "Header-one"))}>H1</Button>
+                <Button type="link" style={{marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "Header-two"))}>H2</Button>
+                <Button type="link" style={{marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "Header-three"))}>H3</Button>
+                <Button type="link" style={{marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "Header-four"))}>H4</Button>
+                <Button type="link" style={{marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "UNDERLINE"))}>UL</Button>
+                <Button type="link" style={{marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "BOLD"))}>Bold</Button>
+                <Button type="link" style={{marginLeft: '10px'}} size="default" onClick={() => setEditorState(RichUtils.toggleInlineStyle(editorState, "ITALIC"))}>Italic</Button>
             </div>
-            <div className="classBody">
-                <div className="task item">
-                    <Card title="남은 과제">
-                        {dummy.task.map((v,i) => {
-                            return (
-                                <p key={i}>{v}</p>
-                            )
-                        })}
-                    </Card>    
-                </div>
-                <div className="data item">
-                    <Card title={dummy.data.date}>
-                        {dummy.data.text}
-                    </Card>
-                </div>
+            <div className="text-Wrapper">
+                <Editor
+                    customStyleMap={styleMap}
+                    handleKeyCommand={handleKeyCommand}
+                    editorState={editorState}
+                    onChange={setEditorState}
+                />
             </div>
         </div>
-    )
+  );
 }
 
 export default Class;
