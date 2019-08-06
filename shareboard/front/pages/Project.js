@@ -1,5 +1,5 @@
 import React from 'react';
-import {Typography, Card, Collapse } from 'antd';
+import {Typography, Card, Collapse, Button } from 'antd';
 const Project = () => {
     const dummy = {
         topic: "김주성의 클래스",
@@ -74,10 +74,7 @@ const Project = () => {
                     }
                 `}
             </style>
-            <div className="classTitle">
-                <div className="topic item"><Typography.Title mark>{dummy.topic}</Typography.Title></div>
-            </div>
-            <div className="classBody">
+            <div style={{marginTop: '40px'}}className="classBody">
                 <div className="task item">
                     <Card title="미제출 과제">
                         {dummy.task.map((v,i) => {
@@ -107,7 +104,7 @@ const Project = () => {
                                             <div style={{display:'inline'}}>{v.submit ? "제출함" : "제출안함"}</div>
                                         </div>}
                                         key={i}>
-                                        <p>ㅁㄴㅇㄴㅁㅇㅁㄴ</p>
+                                        <Button type="primary">작업하러가기</Button>
                                     </Collapse.Panel>
                                 )
                             })

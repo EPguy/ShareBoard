@@ -30,7 +30,7 @@ const Home = () => {
                                 <Link href={`/class?id=${v.id}`}>
                                     <Card 
                                         hoverable={true}
-                                        style={{marginLeft: '20px', marginTop: '20px'}}
+                                        style={{ boxShadow: '1.5px 1.5px 4px 0 rgba(0, 0, 0, 0.16)', marginLeft: '20px', marginTop: '20px'}}
                                         cover={
                                             <img
                                             alt="example"

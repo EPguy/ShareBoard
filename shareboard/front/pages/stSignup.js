@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import {Form, Input, Icon,Button} from 'antd';
 import Link from 'next/link';
+import axios from 'axios';
 
 export const useInput = (initValue = null) => {
     const [value, setter] = useState(initValue);
@@ -14,6 +15,19 @@ const login = () => {
     const [name, onChangeName] = useInput('');
     const [password, onChangePassword] = useInput('');
     const [passwordCheck, onChangePasswordCheck] = useInput('');
+
+    const onSubmit = useCallback((e) => {
+        e.preventDefault();
+        axios.post("http://18.220.117.207:5000/auth/signUp/student", {
+            id: id,
+            password: password,
+            name: name
+        }).then(response => {
+            console.log(response)
+        }).catch(error => {
+            console.log(error)
+        })
+      }, [id, password]);
     return (
         <div>
             <style jsx>
@@ -77,13 +91,13 @@ const login = () => {
                         <div style={{marginTop: '10px', marginLeft:'800px', width:'300px'}}>
                             <label style={{display:'inline'}} htmlFor="user-Password-Check">비밀번호 확인</label>
                             <Input
-                                value={PasswordCheck}
+                                value={passwordCheck}
                                 onChange={onChangePasswordCheck}
                                 name="user-Password-Check"
                                 type="password"
                             />
                         </div>
-                        <Button  style={{marginTop: '20px', marginLeft:'800px', width:'300px'}} type="primary" htmlType="submit" className="login-form-button">
+                        <Button  onClick={onSubmit} style={{marginTop: '20px', marginLeft:'800px', width:'300px'}} type="primary" htmlType="submit" className="login-form-button">
                             Sign up
                         </Button>
                     </Form>
